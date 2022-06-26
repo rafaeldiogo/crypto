@@ -45,7 +45,7 @@ const Navbar = () => {
       >
         <ul className="w-full p-4">
           <li className="border-b py-6">
-            <Link to="/">Home</Link>
+            <Link to="/">Página principal</Link>
           </li>
           <li className="border-b py-6">
             <Link to="/">Conta</Link>

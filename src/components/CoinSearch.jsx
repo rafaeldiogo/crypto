@@ -5,29 +5,30 @@ const CoinSearch = ({ coins }) => {
   const [searchText, setSearchText] = useState("");
 
   return (
-    <div>
-      <div>
-        <h1>Pesquisa Crypto</h1>
+    <div className="rounded-div my-4">
+      <div className="flex flex-col md:flex-row justify-between pt-4 pb-6 text-center md:text-right">
+        <h1 className="text-2xl font-bold my-2">Pesquisa Crypto</h1>
         <form>
           <input
             onChange={(e) => setSearchText(e.target.value)}
+            className="w-full bg-primary border border-input px-4 py-2 rounded-2xl shadow-xl"
             type="text"
             placeholder="Pesquise uma moeda"
           />
         </form>
       </div>
 
-      <table>
+      <table className="w-full border-collapse text-center">
         <thead>
-          <tr>
+          <tr className="border-b">
             <th></th>
-            <th>#</th>
-            <th>Moeda</th>
+            <th className="px-4">#</th>
+            <th className="text-left">Moeda</th>
             <th></th>
             <th>Preço</th>
             <th>24h</th>
-            <th>24h Volume</th>
-            <th>Mkt</th>
+            <th className="hidden md:table-cell">24h Volume</th>
+            <th className="hidden sm:table-cell">Mkt</th>
             <th>Últimos 7 dias</th>
           </tr>
         </thead>
