@@ -1,7 +1,7 @@
 import React from "react";
 import CoinSearch from "../components/CoinSearch";
 
-const Home = (coins) => {
+const Home = ({ coins }) => {
   return (
     <div>
       <CoinSearch coins={coins} />

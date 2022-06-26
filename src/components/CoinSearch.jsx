@@ -1,15 +1,22 @@
-import React from "react";
-import {AiOutlineStar} from 'react-icons/ai'
+import React, { useState } from "react";
+import CoinItem from "./CoinItem";
 
 const CoinSearch = ({ coins }) => {
+  const [searchText, setSearchText] = useState("");
+
   return (
     <div>
       <div>
         <h1>Pesquisa Crypto</h1>
         <form>
-          <input type="text" placeholder="Pesquise uma moeda" />
+          <input
+            onChange={(e) => setSearchText(e.target.value)}
+            type="text"
+            placeholder="Pesquise uma moeda"
+          />
         </form>
       </div>
+
       <table>
         <thead>
           <tr>
@@ -25,19 +32,19 @@ const CoinSearch = ({ coins }) => {
           </tr>
         </thead>
         <tbody>
-          {coins.map((coin) => (
-            <tr>
-              <td><AiOutlineStar/></td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-            </tr>
-          ))}
+          {coins
+            .filter((value) => {
+              if (searchText === "") {
+                return value;
+              } else if (
+                value.name.toLowerCase().includes(searchText.toLowerCase())
+              ) {
+                return value;
+              }
+            })
+            .map((coin) => (
+              <CoinItem key={coin.id} coin={coin} />
+            ))}
         </tbody>
       </table>
     </div>
