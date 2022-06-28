@@ -8,6 +8,7 @@ import Signup from "./routes/Signup";
 import Account from "./routes/Account";
 import axios from "axios";
 import CoinPage from "./routes/CoinPage";
+import Footer from "./components/Footer";
 
 function App() {
   const [coins, setCoins] = useState([]);
@@ -33,6 +34,7 @@ function App() {
           <Route path=":coinId" />
         </Route>
       </Routes>
+      <Footer />
     </ThemeProvider>
   );
 }
