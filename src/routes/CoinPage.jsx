@@ -45,14 +45,14 @@ const CoinPage = () => {
           </div>
           <div className="flex justify-between py-4">
             <div>
-              <p className="text-gray-500 text-sm">Capitalização de mercado</p>
+              <p className="text-gray-500 text-sm">Valor de mercado</p>
               {coin.market_data?.market_cap ? (
                 <p>${coin.market_data.market_cap.usd.toLocaleString()}</p>
               ) : null}
             </div>
             <div>
               <p className="text-gray-500 text-sm">
-                Volume de negociação de 24h
+                Volume em 24h
               </p>
               {coin.market_data?.total_volume ? (
                 <p>${coin.market_data.total_volume.usd.toLocaleString()}</p>
@@ -81,25 +81,25 @@ const CoinPage = () => {
           <div className="flex justify-between py-4">
             <div>
               <p className="text-gray-500 text-sm">
-                Classificação da capitalização de mercado
+                Classificação de mercado
               </p>
               #{coin.market_cap_rank}
             </div>
 
             <div>
-              <p className="text-gray-500 text-sm">Hashing Algorithm</p>
+              <p className="text-gray-500 text-sm">Algoritmo de hash</p>
               {coin.hashing_algorithm ? <p>{coin.hashing_algorithm}</p> : null}
             </div>
 
             <div>
-              <p className="text-gray-500 text-sm">Trust Score</p>
+              <p className="text-gray-500 text-sm">Pontuação de confiança</p>
               {coin.tickers ? <p>{coin.liquidity_score.toFixed(2)}</p> : null}
             </div>
           </div>
 
           <div className="flex justify-between py-4">
             <div>
-              <p className="text-gray-500 text-sm">Price Change (24h)</p>
+              <p className="text-gray-500 text-sm">Alteração em 24h</p>
               {coin.market_data ? (
                 <p>
                   {coin.market_data.price_change_percentage_24h.toFixed(2)}%
@@ -108,13 +108,13 @@ const CoinPage = () => {
             </div>
 
             <div>
-              <p className="text-gray-500 text-sm">Price Change (7 dias)</p>
+              <p className="text-gray-500 text-sm">Alteração de preço em 7 dias</p>
               {coin.market_data ? (
                 <p>{coin.market_data.price_change_percentage_7d.toFixed(2)}%</p>
               ) : null}
             </div>
             <div>
-              <p className="text-gray-500 text-sm">Price Change (14 dias)</p>
+              <p className="text-gray-500 text-sm">Alteração de preço em 14 dias</p>
               {coin.market_data ? (
                 <p>
                   {coin.market_data.price_change_percentage_14d.toFixed(2)}%
@@ -125,7 +125,7 @@ const CoinPage = () => {
 
           <div className="flex justify-between py-4">
             <div>
-              <p className="text-gray-500 text-sm">Price Change (30d)</p>
+              <p className="text-gray-500 text-sm">Alteração de preço em 30 dias</p>
               {coin.market_data ? (
                 <p>
                   {coin.market_data.price_change_percentage_30d.toFixed(2)}%
@@ -133,7 +133,7 @@ const CoinPage = () => {
               ) : null}
             </div>
             <div>
-              <p className="text-gray-500 text-sm">Price Change (60d)</p>
+              <p className="text-gray-500 text-sm">Alteração de preço em 60 dias</p>
               {coin.market_data ? (
                 <p>
                   {coin.market_data.price_change_percentage_60d.toFixed(2)}%
@@ -141,7 +141,7 @@ const CoinPage = () => {
               ) : null}
             </div>
             <div>
-              <p className="text-gray-500 text-sm">Price Change (1 ano)</p>
+              <p className="text-gray-500 text-sm">Alteração de preço em 1 ano</p>
               {coin.market_data ? (
                 <p>{coin.market_data.price_change_percentage_1y.toFixed(2)}%</p>
               ) : null}
@@ -158,7 +158,7 @@ const CoinPage = () => {
       </div>
 
       <div className="py-4">
-        <p className="text-xl font-bold">About {coin.name}</p>
+        <p className="text-xl font-bold">Sobre {coin.name}</p>
         <p
           dangerouslySetInnerHTML={{
             __html: DOMPurify.sanitize(

@@ -13,7 +13,7 @@ const ThemeToggle = () => {
           onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
         >
           <HiSun className="test-primary text-2xl mr-2" />
-          Light Mode
+          Modo Luz
         </div>
       ) : (
         <div
@@ -21,7 +21,7 @@ const ThemeToggle = () => {
           onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
         >
           <HiMoon className="test-primary text-2xl mr-2" />
-          Dark Mode
+          Modo Escuro
         </div>
       )}
     </div>

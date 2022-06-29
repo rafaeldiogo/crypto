@@ -7,7 +7,7 @@ const CoinSearch = ({ coins }) => {
   return (
     <div className="rounded-div my-4">
       <div className="flex flex-col md:flex-row justify-between pt-4 pb-6 text-center md:text-right">
-        <h1 className="text-2xl font-bold my-2">Preços da criptomoeda por capitalização de mercado</h1>
+        <h1 className="text-2xl font-bold my-2">Pesquisar criptomoedas</h1>
         <form>
           <input
             onChange={(e) => setSearchText(e.target.value)}

@@ -9,21 +9,21 @@ const Footer = () => {
       <div className="grid md:grid-cols-2">
         <div className="flex justify-evenly w-full md:max-w-[300px] uppercase">
           <div>
-            <h2 className="font-bold">Support</h2>
+            <h2 className="font-bold">Suporte</h2>
             <ul>
-              <li className="text-sm py-2">Help Center</li>
-              <li className="text-sm py-2">Contact Us</li>
+              <li className="text-sm py-2">Centro de ajuda</li>
+              <li className="text-sm py-2">Contate-nos</li>
               <li className="text-sm py-2">API Status</li>
-              <li className="text-sm py-2">Documentation</li>
+              <li className="text-sm py-2">Documentação</li>
             </ul>
           </div>
           <div>
-            <h2 className="font-bold">Info</h2>
+            <h2 className="font-bold">Informações</h2>
             <ul>
-              <li className="text-sm py-2">About Us</li>
-              <li className="text-sm py-2">Carrers</li>
-              <li className="text-sm py-2">Invest</li>
-              <li className="text-sm py-2">Legal</li>
+              <li className="text-sm py-2">Sobre nós</li>
+              <li className="text-sm py-2">Carreiras</li>
+              <li className="text-sm py-2">Investir</li>
+              <li className="text-sm py-2">Jurídico</li>
             </ul>
           </div>
         </div>
@@ -34,7 +34,7 @@ const Footer = () => {
                 <ThemeToggle />
               </div>
               <p className="text-center md:text-right">
-                Sign up for cryto news
+                Increva-se para receber notícias das criptomoedas
               </p>
               <div className="py-4">
                 <form>
@@ -44,7 +44,7 @@ const Footer = () => {
                     placeholder="Digite seu email"
                   />
                   <button className="bg-button text-btnText px-4 p-2 w-full rounded-2xl shadow-xl hover:shadow-2xl md:w-auto my-2">
-                    Sign up
+                    Inscreva-se
                   </button>
                 </form>
               </div>
@@ -59,7 +59,7 @@ const Footer = () => {
           </div>
         </div>
       </div>
-      <p className="text-center py-4">Powered by Coin Gecko</p>
+      <p className="text-center py-4">Desenvolvido baseado na Coin Gecko</p>
     </div>
   );
 };
